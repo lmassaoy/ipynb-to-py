@@ -31,5 +31,5 @@ output_dir = './output'
 
 To execute this converter, just run the job with the list of notebooks for convertion as the arguments:
 ```
-$ python3 converter.py notebook_number_one.ipynb notebook_number_two.ipynb notebook_number_etc.ipynb'
+$ python3 converter.py notebook_number_one.ipynb notebook_number_two.ipynb notebook_number_etc.ipynb
 ```
