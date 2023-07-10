@@ -34,17 +34,25 @@ def main(notebooks):
             for cell in notebook_dict['cells']:
                 if 'source' in cell.keys() and cell['cell_type'] == 'code':
                     if export_line in cell['source']:
+                        if first_block:
+                            first_block == False
+                        else:
+                            python_file.writelines('\n')
+
                         for block in cell['source']:
                             if block != export_line:
                                 python_file.writelines(block)
-                    python_file.writelines('\n')
+                        
+                        python_file.writelines('\n')
+                    else:
+                        python_file.writelines('\n')
 
             python_file.close()
         except Exception as e:
-            print(f'An error happened: {e}')
+            print(f'An error happened in file {notebook}: {e}')
         else:
             print(f'{notebook} was converted successfully. Python file created at {new_python_file}')
-        
+
 
 if __name__ == '__main__':
     main(sys.argv[1:])
