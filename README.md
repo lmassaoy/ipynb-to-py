@@ -1,6 +1,6 @@
-# ipynb to py
+# Jupyter Notebooks to Python Files
 
-Export python script from Jupyter Notebook to runnable .py file
+Produce runnable .py files from Jupyter notebooks, capturing only code-cells
 
 ## Set up
 
